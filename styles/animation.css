@@ -1,0 +1,31 @@
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes tumbleweedBounce {
+  
+    0% {
+      transform: translateY(20px) translateX(0vw);
+    }
+  
+    25% {
+      transform: translateY(-50px) translateX(25vw);
+    }
+  
+    50% {
+      transform: translateY(20px) translateX(50vw);
+    }
+  
+    75% {
+      transform: translateY(-50px) translateX(75vw);
+    }
+  
+    100% {
+      transform: translateY(20px) translateX(100vw);
+    }
+  }

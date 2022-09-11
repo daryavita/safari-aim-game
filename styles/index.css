@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css?family=Khula&display=swap');
+@import './animation.css';
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    color: #fff;
+    font-family: 'Khula', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    text-align: center;
+    min-width: 320px;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #63ff63;
+}
+
+.description {
+    font-size: 24px;
+    max-width: 60%;
+    margin: 30px 0;
+    padding: 0;
+}
+
+.start {
+    font-size: 25px;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 20px;
+    background: linear-gradient(90deg, #146014 0%, #06a506 100%);
+    margin: 20px 0;
+    padding: 15px;
+    z-index: 2;
+}
+
+.start:hover {
+    box-shadow: #64fc64 0px 0px 2px, #6dfc6d 0px 0px 10px;
+}
+
+h1 {
+    line-height: 1.4;
+    font-size: 80px;
+    margin: 20px 0;
+    padding: 0;
+}
+
+.screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    transition: margin 0.5s ease-out;
+    background: linear-gradient(90deg, #a67425 0%, #e39822 20%, #e5b862 50%, #faea93 100%);
+    position: relative;
+}
+
+.screen.up {
+    margin-top: -100vh;
+}
+
+.time-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    z-index: 2;
+}
+
+.time-list li {
+    margin: 10px;
+}
+
+.time-btn {
+    background-color: transparent;
+    border: 2px solid #63ff63;
+    color: #fff;
+    cursor: pointer;
+    font-family: inherit;
+    padding: 10px 20px;
+    font-size: 26px;
+    border-radius: 20px;
+}
+
+.time-btn:hover {
+    color: #63ff63;
+    box-shadow: #64fc64 0px 0px 2px, #6dfc6d 0px 0px 10px;
+}
+
+.hide {
+    opacity: 0;
+}
+
+.primary {
+    color: #63ff63;
+}
+
+.board {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    position: relative;
+    width: 60%;
+    height: 60%;
+    border-radius: 30px;
+    overflow: hidden;
+    background-image: url('../images/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.animal {
+    position: absolute;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 3;
+}
+
+.bounce {
+    width: 20%;
+    position: absolute;
+    z-index: 1;
+    bottom: -50px;
+    left: -100px;
+    animation: tumbleweedBounce linear infinite 5s;
+}
+
+.tumbleweed {
+    width: 100%;
+    animation: rotation linear infinite 3s;
+}
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 50px;
+    }
+
+    .description {
+        font-size: 16px;
+    }
+
+    .start {
+        font-size: 16px;
+    }
+
+    .bounce {
+        width: 50%;
+        left: 0;
+    }
+
+    .screen {
+        padding: 20px;
+    }
+
+    .board {
+        width: 100%;
+        height: 50%;
+    }
+
+    .time-btn {
+        padding: 10px 20px;
+        font-size: 20px;
+    }
+}
